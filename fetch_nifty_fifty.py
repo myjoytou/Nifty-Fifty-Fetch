@@ -52,7 +52,6 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
-    cherrypy.config.update({'server.socket_port': 8080})
     cherrypy.process.plugins.Monitor(cherrypy.engine, NiftyFifty().initiate_background_job, frequency=300).subscribe()
     cherrypy.quickstart(NiftyFifty(), '/', conf)
     cherrypy.engine.start()
