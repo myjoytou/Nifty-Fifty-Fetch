@@ -43,7 +43,7 @@ class NiftyFifty(object):
 
 
 if __name__ == '__main__':
-    # port = os.environ['PORT']
+    port = os.environ['PORT']
     conf = {
         '/': {
             'tools.staticdir.root': os.path.abspath(os.getcwd())
@@ -53,10 +53,10 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
-    # cherrypy.config.update({
-    #     'server.socket_host': '0.0.0.0',
-    #     'server.socket_port': int(port),
-    # })
+    cherrypy.config.update({
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': int(port),
+    })
     cherrypy.process.plugins.Monitor(cherrypy.engine, NiftyFifty().initiate_background_job, frequency=300).subscribe()
     cherrypy.quickstart(NiftyFifty(), '/', conf)
     cherrypy.engine.start()
