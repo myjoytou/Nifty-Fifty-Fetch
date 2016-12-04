@@ -1,0 +1,16 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+md-card {
+    background: rgba(66,66,66,1.0);
+    color: rgba(255,255,255,1.0);
+}
+button.refresh {
+    margin-left: 6px;
+}
+
+md-card-content > div.cell:nth-of-type(odd){
+    background: #636363;
+}

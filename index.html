@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Nifty Fifty Top Gainers</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/angular-material.min.css">
+    <link rel="stylesheet" href="/static/css/angular-flash.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 
+    <script src="/static/library/jquery-min.js"></script>
+    <script src="/static/library/bootstrap.min.js"></script>
+    <script src="/static/library/angular-min.js"></script>
+    <script src="/static/library/angular-material.min.js"></script>
+    <script src="/static/library/ui-router.min.js"></script>
+    <script src="/static/library/angular-flash.js"></script>
+
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/app.js"></script>
+</head>
+<body ng-app="myApp">
+    <div class="container">
+        <div class="row">
+
+            <div class="text-center">
+                <h2>Welcome to Nifty 50</h2>
+            </div>
+            <div ui-view></div>
+                <!--<md-card>-->
+                    <!--<md-card-header>-->
+                        <!--<md-card-header-text>-->
+                            <!--Normal Header-->
+                        <!--</md-card-header-text>-->
+                    <!--</md-card-header>-->
+                    <!--<md-card-title>-->
+                        <!--<md-card-title-text>-->
+                            <!--Random Text-->
+                        <!--</md-card-title-text>-->
+                    <!--</md-card-title>-->
+                <!--</md-card>-->
+        </div>
+    </div>
 </body>
 </html>

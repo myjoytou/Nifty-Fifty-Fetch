@@ -1,0 +1,53 @@
+<div class="col-md-12">
+    <div class="col-md-12">
+        <button class="btn btn-primary refresh col-md-1" ng-click="getData()">Refresh!</button>
+        <div flash-message="5000" class="col-md-10"></div>
+    </div>
+    <div class="col-md-4" ng-repeat="feed in niftyFifty.liveFeed">
+        <md-card>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-title">{{ feed.symbol }}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">LTP</div>
+                    <div class="col-md-6">{{feed.ltp}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">% Change</div>
+                    <div class="col-md-6">{{feed.netPrice}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">Traded Qty</div>
+                    <div class="col-md-6">{{feed.tradedQuantity}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">Value in lakhs</div>
+                    <div class="col-md-6">{{feed.turnoverInLakhs}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">open</div>
+                    <div class="col-md-6">{{feed.openPrice}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">high</div>
+                    <div class="col-md-6">{{feed.highPrice}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">low</div>
+                    <div class="col-md-6">{{feed.lowPrice}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">Prev close</div>
+                    <div class="col-md-6">{{feed.ltp}}</div>
+                </div>
+                <div class="col-md-12 cell">
+                    <div class="col-md-6">Latest Ex date</div>
+                    <div class="col-md-6">{{feed.lastCorpAnnouncementDate}}</div>
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>
