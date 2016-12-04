@@ -26,7 +26,8 @@ class NiftyFifty(object):
 
     def initialize_db(self):
         try:
-            cherrypy.thread_data.db = redis.StrictRedis(host="localhost", port=6379, db=0)
+            # cherrypy.thread_data.db = redis.StrictRedis(host="localhost", port=6379, db=0)
+            cherrypy.thread_data.db = redis.from_url(os.environ.get("REDIS_URL"))
         except redis.ConnectionError as e:
             cherrypy.log('Error connecting the db!')
 
