@@ -18,10 +18,10 @@ angular.module('myApp', ['ui.router', 'flash'])
 
     .service('apiService',['$http', '$q', 'appSettings', function ($http, $q, appSettings) {
         var apiService = {};
-        var apiBase = appSettings.apiBase;
+        // var apiBase = location.protocol + location.host + "/";
         var get = function (module) {
             var deferred = $q.defer();
-            $http.get(apiBase + module, {}, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
+            $http.get(module, {}, { headers: { 'Content-Type': 'application/json' } }).success(function (response) {
                 deferred.resolve(response.data);
             }).catch(function (data) {
                 console.log('there was some error');
